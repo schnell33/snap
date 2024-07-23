@@ -1,0 +1,24 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/examples/node2vec/node2vec",
+            "args": ["-i:graph/karate.edgelist", "-o:emb/karate.emb", "-l:3", "-d:24", "-p:0.3", "-dr", "-v"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/examples/node2vec/",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+        }
+    ]
+}
