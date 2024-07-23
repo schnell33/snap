@@ -2,6 +2,11 @@
 # Makefile for non-Microsoft compilers
 #
 
+ifdef DEBUG
+    export CFLAGS += -g
+    export CXXFLAGS += -g
+endif
+
 all: MakeAll
 
 test: TestAll
